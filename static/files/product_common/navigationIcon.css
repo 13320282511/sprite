@@ -1,0 +1,126 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.fa-APIKey-manage {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -32px 0px;
+  width: 30px;
+  height: 30px;
+}
+.fa-APIKey-manage-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -96px 0px;
+  width: 30px;
+  height: 30px;
+}
+.fa-app-manage {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: 0px -32px;
+  width: 30px;
+  height: 30px;
+}
+.fa-app-manage-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -32px -32px;
+  width: 30px;
+  height: 30px;
+}
+.fa-data-template {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -64px 0px;
+  width: 30px;
+  height: 30px;
+}
+.fa-data-template-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -64px -32px;
+  width: 30px;
+  height: 30px;
+}
+.fa-develop-manage {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: 0px -64px;
+  width: 30px;
+  height: 30px;
+}
+.fa-develop-manage-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -32px -64px;
+  width: 30px;
+  height: 30px;
+}
+.fa-device-group {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -64px -64px;
+  width: 30px;
+  height: 30px;
+}
+.fa-device-group-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 30px;
+}
+.fa-online-debug {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -96px -32px;
+  width: 30px;
+  height: 30px;
+}
+.fa-online-debug-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -96px -64px;
+  width: 30px;
+  height: 30px;
+}
+.fa-product-manage {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: 0px -96px;
+  width: 30px;
+  height: 30px;
+}
+.fa-product-manage-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -32px -96px;
+  width: 30px;
+  height: 30px;
+}
+.fa-product-summary {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -64px -96px;
+  width: 30px;
+  height: 30px;
+}
+.fa-product-summary-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -96px -96px;
+  width: 30px;
+  height: 30px;
+}
+.fa-trigger-manage {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -128px 0px;
+  width: 30px;
+  height: 30px;
+}
+.fa-trigger-manage-active {
+  background-image: url(/static/files/product_common/navigationIcon.png);
+  background-position: -128px -32px;
+  width: 30px;
+  height: 30px;
+}

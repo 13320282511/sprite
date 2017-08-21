@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="Keywords" content="关键字,关键字,关键字" />
+		<meta name="Description" content="描述描述" />
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/zujian1.css" />
+		<!--[if lt IE 9]>
+    		<script type="text/javascript" src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    	<![endif]-->
+
+    	<script type="text/javascript">
+			
+			var Dpr = 1,
+				uAgent = window.navigator.userAgent;
+			var isIOS = uAgent.match(/iphone/i);
+			var isYIXIN = uAgent.match(/yixin/i);
+			var is2345 = uAgent.match(/Mb2345/i);
+			var ishaosou = uAgent.match(/mso_app/i);
+			var isSogou = uAgent.match(/sogoumobilebrowser/ig);
+			var isLiebao = uAgent.match(/liebaofast/i);
+			var isGnbr = uAgent.match(/GNBR/i);
+
+			function resizeRoot() {
+				var wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width : window.innerWidth : window.innerWidth,
+					wDpr, wFsize;
+				var wHeight = (screen.height > 0) ? (window.innerHeight >= screen.height || window.innerHeight == 0) ? screen.height : window.innerHeight : window.innerHeight;
+				if (window.devicePixelRatio) {
+					wDpr = window.devicePixelRatio;
+				} else {
+					wDpr = isIOS ? wWidth > 818 ? 3 : wWidth > 480 ? 2 : 1 : 1;
+				}
+				if (isIOS) {
+					wWidth = screen.width;
+					wHeight = screen.height;
+				}
+				// if(window.orientation==90||window.orientation==-90){
+				//     wWidth = wHeight;
+				// }else if((window.orientation==180||window.orientation==0)){
+				// }
+				if (wWidth > wHeight) {
+					wWidth = wHeight;
+				}
+				wFsize = wWidth > 1080 ? 144 : wWidth / 6.4;
+				wFsize = wFsize > 32 ? wFsize : 32;
+				window.screenWidth_ = wWidth;
+				if (isYIXIN || is2345 || ishaosou || isSogou || isLiebao || isGnbr) { //YIXIN 和 2345 这里有个刚调用系统浏览器时候的bug，需要一点延迟来获取
+					setTimeout(function() {
+						wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width : window.innerWidth : window.innerWidth;
+						wHeight = (screen.height > 0) ? (window.innerHeight >= screen.height || window.innerHeight == 0) ? screen.height : window.innerHeight : window.innerHeight;
+						wFsize = wWidth > 1080 ? 144 : wWidth / 6.4;
+						wFsize = wFsize > 32 ? wFsize : 32;
+						// document.getElementsByTagName('html')[0].dataset.dpr = wDpr;
+						document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
+						document.getElementById("fixed").style.display = "none";
+					}, 500);
+				} else {
+					// document.getElementsByTagName('html')[0].dataset.dpr = wDpr;
+					document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
+					//document.getElementById("fixed").style.display = "none";
+				}
+				// alert("fz="+wFsize+";dpr="+window.devicePixelRatio+";UA="+uAgent+";width="+wWidth+";sw="+screen.width+";wiw="+window.innerWidth+";wsw="+window.screen.width+window.screen.availWidth);
+			}
+			resizeRoot();
+		</script>
+    	<script type="text/javascript" src="js/zepto.js"></script>
+    	<script type="text/javascript" src="js/lazyload1.js"></script>
+    	<script type="text/javascript" src="js/scroll.js"></script>
+    	<script type="text/javascript" src="js/iscroll.js"></script>
+    	
+	</head>
+
+	<body>
+<!--左右独立滑动部分开始-->
+<script type="text/javascript">
+	var huajscon={
+		"美食":{"甜点":11,"可乐":222},
+		"看电影":{"门票":22,"免费":333},
+		"团购":{"单人团":23,"多人团":45,"学生团":56,"教师团":78,"工人团":89,"博士团":68,"夫妻团":90,"单身团":89,"情侣团":99}
+	};
+
+</script>
+<div id="wrapper">
+	<div id="scroller">
+		<ul>
+			
+		</ul>
+	</div>
+</div>
+<div id="wrapper1">
+	<div id="scroller1">
+		<div id="scrollin">
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	var myScroll;
+	var fragment = document.createDocumentFragment();
+	var li = null;
+	for(var i in huajscon){
+		
+		var fragment1 = document.createDocumentFragment();
+		var li1 = null;
+		
+		for(var j in huajscon[i]){
+			li1 = document.createElement("li");
+			li1.innerHTML = j;
+			fragment1.appendChild(li1);
+		}
+		var ch3 = document.createElement("h3");
+		ch3.innerHTML = i;
+		divc = document.createElement("div");
+		divc.setAttribute("data-name",i);
+		divc.appendChild(ch3);
+		var ul1 = document.createElement("ul");
+		ul1.appendChild(fragment1);
+		divc.appendChild(ul1);
+
+		$("#scrollin")[0].appendChild(divc);
+		
+		
+		li = document.createElement("li");
+		li.innerHTML = i;
+		
+		fragment.appendChild(li);
+	}
+	//console.log($("#scroller"))
+	$("#scroller")[0].children[0].appendChild(fragment);
+	function loaded () {
+		myScroll = new IScroll('#wrapper', { mouseWheel: true,click: true });
+	}
+	//window.onload = loaded;
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+	document.getElementById("scroller").addEventListener("click",function(e){
+
+		console.log(e.target);
+	});
+	
+</script>
+
+<script type="text/javascript">
+
+	var myScroll1;
+	var myScroll;
+	
+	function loaded () {
+		myScroll = new IScroll('#wrapper', { mouseWheel: true,click: true });
+	}
+	//window.onload = loaded;
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+	document.getElementById("scroller").addEventListener("click",function(e){
+
+		console.log(e.target);
+	});
+
+	function loaded1 () {
+		myScroll1 = new IScroll('#wrapper1', { mouseWheel: true });
+	}
+	window.onload = function(){
+		loaded();
+		loaded1();
+	};
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+
+</script>
+<!--左右独立滑动部分结束-->
+<script type="text/javascript">
+    		$("img.imgload").lazyload();
+    	</script>	
+</body>
+</html>

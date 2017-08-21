@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.pay_com{ width:1200px; margin:auto; border-top:1px solid #cfcfcf; overflow:hidden;}
+.pay_tit{ padding:20px 40px 20px 40px; overflow:hidden;}
+.pay_titl{ float:left;  font-size:18px;}
+.pay_titl b{color:#fe926e;}
+.pay_titl p{ font-size:14px; padding-top:10px;}
+.pay_titr{float:right; padding-top:15px;}
+.pay_titr p{ float:left; font-size:18px; font-weight:bold; display:block; padding-top:10px;}
+.pay_titr h2{ float:left; font-size:32px; color:#fe926e;}
+.pay_more{ clear:both; border-top:1px solid #cfcfcf;}
+.pay_more a{ display:block; width:150px; float:right; border:1px solid #cfcfcf; border-top:none; text-align:center; height:35px; line-height:35px;}
+.pay_more a:hover{color:#fe926e;}
+
+
+.tabPanel h1{ float:left; font-weight:normal; font-size:16px; line-height:40px; width:200px; text-align:center;}
+.tabPanel ul{height:40px;border-bottom:1px solid #cfcfcf;}
+.tabPanel ul li{float:left;margin:0 2px 0 0;border:1px solid #cfcfcf;font-size:14px;height:39px;line-height:40px;width:120px;text-align:center;cursor:pointer;text-shadow:0 1px 0 #fff; color:#f5a282;}
+.tabPanel .hit{background:#f5a282;color:#fff;}
+.pane{border:1px solid #cfcfcf;border-top:0;min-height:100px;background-color:#fff;display:none; padding-top:30px;}
+.pay_li{ width:220px; float:left; margin-left:60px;}
+.pay_li b{ display:block; height:30px; float:left; padding-top:20px; }
+.pay_li i{ float:right; display:block; width:195px; height:48px; border:#cfcfcf 1px solid; text-align:center;}
+.pay_li i img{ width:195px; height:48px;}
+
+.pay_a{ width:150px; height:40px; line-height:40px; text-align:center; font-size:16px; background:#eabd4a; color:#FFF; margin:auto; display:block; margin-top:40px; margin-bottom:20px;}
+
+
+

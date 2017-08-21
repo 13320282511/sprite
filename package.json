@@ -1,0 +1,32 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://git.oschina.net/xxxx"
+  },
+  "author": {
+    "name": "surging",
+    "email": "surging2@qq.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "~3.0.0",
+    "gulp-ejs": "^2.1.1",
+    "gulp-imagemin": "~3.1.1",
+    "gulp-less": "^3.0.0",
+    "gulp-replace": "^0.5.4",
+    "merge-stream": "~1.0.1",
+    "sass": "^0.5.0",
+    "vinyl-buffer": "~1.0.0"
+  },
+  "dependencies": {
+    "gulp.spritesmith": "^6.3.0"
+  }
+}

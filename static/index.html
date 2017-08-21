@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="Keywords" content="关键字,关键字,关键字" />
+		<meta name="Description" content="描述描述" />
+		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/zujian1.css" />
+		<!--[if lt IE 9]>
+    		<script type="text/javascript" src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    	<![endif]-->
+
+    	<script type="text/javascript">
+			
+			var Dpr = 1,
+				uAgent = window.navigator.userAgent;
+			var isIOS = uAgent.match(/iphone/i);
+			var isYIXIN = uAgent.match(/yixin/i);
+			var is2345 = uAgent.match(/Mb2345/i);
+			var ishaosou = uAgent.match(/mso_app/i);
+			var isSogou = uAgent.match(/sogoumobilebrowser/ig);
+			var isLiebao = uAgent.match(/liebaofast/i);
+			var isGnbr = uAgent.match(/GNBR/i);
+
+			function resizeRoot() {
+				var wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width : window.innerWidth : window.innerWidth,
+					wDpr, wFsize;
+				var wHeight = (screen.height > 0) ? (window.innerHeight >= screen.height || window.innerHeight == 0) ? screen.height : window.innerHeight : window.innerHeight;
+				if (window.devicePixelRatio) {
+					wDpr = window.devicePixelRatio;
+				} else {
+					wDpr = isIOS ? wWidth > 818 ? 3 : wWidth > 480 ? 2 : 1 : 1;
+				}
+				if (isIOS) {
+					wWidth = screen.width;
+					wHeight = screen.height;
+				}
+				// if(window.orientation==90||window.orientation==-90){
+				//     wWidth = wHeight;
+				// }else if((window.orientation==180||window.orientation==0)){
+				// }
+				if (wWidth > wHeight) {
+					wWidth = wHeight;
+				}
+				wFsize = wWidth > 1080 ? 144 : wWidth / 6.4;
+				wFsize = wFsize > 32 ? wFsize : 32;
+				window.screenWidth_ = wWidth;
+				if (isYIXIN || is2345 || ishaosou || isSogou || isLiebao || isGnbr) { //YIXIN 和 2345 这里有个刚调用系统浏览器时候的bug，需要一点延迟来获取
+					setTimeout(function() {
+						wWidth = (screen.width > 0) ? (window.innerWidth >= screen.width || window.innerWidth == 0) ? screen.width : window.innerWidth : window.innerWidth;
+						wHeight = (screen.height > 0) ? (window.innerHeight >= screen.height || window.innerHeight == 0) ? screen.height : window.innerHeight : window.innerHeight;
+						wFsize = wWidth > 1080 ? 144 : wWidth / 6.4;
+						wFsize = wFsize > 32 ? wFsize : 32;
+						// document.getElementsByTagName('html')[0].dataset.dpr = wDpr;
+						document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
+						document.getElementById("fixed").style.display = "none";
+					}, 500);
+				} else {
+					// document.getElementsByTagName('html')[0].dataset.dpr = wDpr;
+					document.getElementsByTagName('html')[0].style.fontSize = wFsize + 'px';
+					//document.getElementById("fixed").style.display = "none";
+				}
+				// alert("fz="+wFsize+";dpr="+window.devicePixelRatio+";UA="+uAgent+";width="+wWidth+";sw="+screen.width+";wiw="+window.innerWidth+";wsw="+window.screen.width+window.screen.availWidth);
+			}
+			resizeRoot();
+		</script>
+    	<script type="text/javascript" src="js/zepto.js"></script>
+    	<script type="text/javascript" src="js/lazyload1.js"></script>
+    	<script type="text/javascript" src="js/scroll.js"></script>
+    	<script type="text/javascript" src="js/iscroll.js"></script>
+    	
+	</head>
+
+	<body>
+
+
+
+
+
+
+<!--轮播开始-->
+<div class="login-wrap">
+
+	<div class="login-inner">
+		<section id="slider">
+			<div class="ui-slider">
+				<ul class="ui-slider-content">
+					
+					<li>
+						<a style="background-image:url(img/p1.jpg)"></a>
+					</li>
+					
+					<li>
+						<a style="background-image:url(img/p2.jpg)"></a>
+					</li>
+					
+					<li>
+						<a style="background-image:url(img/p3.jpg)"></a>
+					</li>
+					
+					
+				</ul>
+			</div>
+		</section>
+
+		<script type="text/javascript">
+			(function() {
+				var slider = new fz.Scroll('.ui-slider', {
+					role: 'slider',
+					indicator: 'in',
+					autoplay: true,
+					interval: 3000
+				});
+			})();
+		</script>
+	</div>
+
+</div>
+<!--轮播结束-->
+<!--naviocn开始-->
+<div class="navicon-wrap">
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">足浴按摩</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">今日新单</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">生活服务</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">旅游</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">甜点饮品</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">母音亲子</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">学习培训</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">结婚</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">家装</span>
+	</a>
+	
+	<a href="#" class="navicon-a">
+		<span class="navicon-a-spanimg navicon-a-spanurl"></span>
+		<span class="navicon-a-spantitle">全部分类</span>
+	</a>
+	
+</div>
+<!--naviocn开始结束-->
+<!--订单列表开始-->
+
+<div class="dingdan-list-wrap">
+	<div class="dingdan-youhuo">猜你喜欢</div>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">18</span>
+					<span class="strong-color">元</span>
+					<span class="tag">多优惠+</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">20</span>
+					<span class="strong-color">元</span>
+					<span class="tag">新用户5元代金券</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+	<a href="www.baidu.com" class="dingdan-list-a">
+		<div class="dingdan-list">
+			<span class="dd-list-icon"></span>
+			<div class="dd-list-img">
+				<img class="imgload" data-original="img/5.jpg"/>
+			</div>
+
+			<div class="dd-list-right">
+				<div class="dd-list-title">华莱士</div>
+				<div class="dd-list-description">[重庆等]单人超值套餐，提供免费WiFi</div>
+				<div class="dd-list-price">
+					<span class="strong">99</span>
+					<span class="strong-color">元</span>
+					<span class="tag">免费吃</span>
+					<span class="line-right">已售9999</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	
+</div>
+<!--订单列表结束-->
+
+
+	
+
+<script type="text/javascript">
+    		$("img.imgload").lazyload();
+    	</script>	
+</body>
+</html>
